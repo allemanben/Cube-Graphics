@@ -1,1 +1,18 @@
-Did this upload?
+Code uploaded for current state of project.
+
+Step 1- create the 24 verticies for each cube (each vertex should have 2 identical others)
+  Ordering of verticies: positve X face, positive Y face,
+    positive Z face, Negative X face, negative Y face, negative Z face.
+
+Step 2 set up colouring for each cube 
+  -unless you find an easier way to do this, this will be a lot of hard coding...
+  -non-coloured sides will be black (ie [0f, 0f, 0f, 1f])
+
+Step 3 figure out drawing them in place.
+
+Step 4 figure out movement (flight pattern) of "chickens" 
+
+
+Comments:
+  Ben: This is just a feel for what we need to do, feel free to post changes in the comments down here
+        and we can discuss with our next meeting.
