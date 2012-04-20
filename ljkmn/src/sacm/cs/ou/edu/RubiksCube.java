@@ -3,7 +3,7 @@ package sacm.cs.ou.edu;
 //import javax.microedition.khronos.opengles.GL10;
 
 public class RubiksCube {
-	private Cube[] chickens = new Cube[27];
+	Cube[] chickens = new Cube[27];
 	
 	private float verticies[] = {
 			// FRONT
@@ -44,7 +44,31 @@ public class RubiksCube {
   	       1.0f, -1.0f,  1.0f   // 1. right-bottom-front
             };
 	
-	private float colours[] = {/*TODO make a colour set for each chicken...*/};
+	private float colours[] = {
+			(float)(1), (float)(0), (float)(0), 1.0f,
+    		(float)(1), (float)(0), (float)(0), 1.0f,
+    		(float)(1), (float)(0), (float)(0), 1.0f,
+    		(float)(1), (float)(0), (float)(0), 1.0f,
+    		(float)(0), (float)(0), (float)(1), 1.0f,
+    		(float)(0), (float)(0), (float)(1), 1.0f,
+    		(float)(0), (float)(0), (float)(1), 1.0f,
+    		(float)(0), (float)(0), (float)(1), 1.0f,
+    		(float)(0), (float)(1), (float)(0), 1.0f,
+    		(float)(0), (float)(1), (float)(0), 1.0f,
+    		(float)(0), (float)(1), (float)(0), 1.0f,
+    		(float)(0), (float)(1), (float)(0), 1.0f,
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f,
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f,
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f, 
+    		.5f, .5f, .5f, 1f, };
 	
 	private byte indicies[] = {
     		0, 1, 2, 2, 3, 1,//Face1
