@@ -41,20 +41,44 @@ public class Cube {
         
         
 	}
-	public void draw(GL10 gl) {             
-        gl.glFrontFace(GL10.GL_CW);
+	public void draw(GL10 gl) {
+		//TODO params for different base vertex position
+		
+//        gl.glFrontFace(GL10.GL_CW);
+//        
+//        gl.glVertexPointer(3, GL10.GL_FLOAT, 0, vertexBuffer);
+//        gl.glColorPointer(4, GL10.GL_FLOAT, 0, colorBuffer);
+//        
+//        gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
+//        gl.glEnableClientState(GL10.GL_COLOR_ARRAY);
+//         
+//        gl.glDrawElements(GL10.GL_TRIANGLES, indicies.length, GL10.GL_UNSIGNED_BYTE, 
+//                        indexBuffer);
+//            
+//        gl.glDisableClientState(GL10.GL_VERTEX_ARRAY);
+//        gl.glDisableClientState(GL10.GL_COLOR_ARRAY);
+		
+		gl.glFrontFace(GL10.GL_CW);
         
         gl.glVertexPointer(3, GL10.GL_FLOAT, 0, vertexBuffer);
         gl.glColorPointer(4, GL10.GL_FLOAT, 0, colorBuffer);
         
+        
+        //TODO find a way to handle the translate
+        gl.glTranslatef(0f, 0f, -10f);
+        
+        //mCubeRotation -= rotation_const;
+        //gl.glRotatef(mCubeRotation, 1f, 1f, 1f);
+        
         gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
         gl.glEnableClientState(GL10.GL_COLOR_ARRAY);
          
-        gl.glDrawElements(GL10.GL_TRIANGLES, 36, GL10.GL_UNSIGNED_BYTE, 
+        gl.glDrawElements(GL10.GL_TRIANGLES, indicies.length, GL10.GL_UNSIGNED_BYTE, 
                         indexBuffer);
             
         gl.glDisableClientState(GL10.GL_VERTEX_ARRAY);
         gl.glDisableClientState(GL10.GL_COLOR_ARRAY);
 }
+	
 	
 }
