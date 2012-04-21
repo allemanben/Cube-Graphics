@@ -33,17 +33,27 @@ class OpenGLRenderer implements Renderer {
         
         mCubeRotation -= 0.45f;
         
-        gl.glTranslatef(0.0f, 0.0f, 0.0f);
+        gl.glTranslatef(0.0f, 0.0f, -50f);
         
-        //gl.glRotatef(mCubeRotation, 1f, 1f, 1f);
+       gl.glRotatef(mCubeRotation, 1f, 1f, 1f);
             
         RubiksCube mCubes = new RubiksCube();
-        mCube1 = mCubes.chickens[0];
-        mCube1.draw(gl);
-//        mCube2.draw(gl);
-//        mCube3.draw(gl);
+         
+
+        for(int x = 0; x < 3f; x++)
+        	for(int y = 0; y < 3f; y++)
+        		for(int z = 0; z < 3f; z++)
+        		{
+        			mCubes.chickens[x][y][z].draw(gl);
+        		}
+        
+       
+        
+        //Cube2.draw(gl);
+        //mCube3.draw(gl);
         //mCube4.draw(gl);
-           
+        
+        
         gl.glLoadIdentity();
             
         
